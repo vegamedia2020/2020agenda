@@ -14,4 +14,10 @@ class Question extends Model
     	//$question->user->name;
 
     }
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title']=$value;
+        $this->attributes['slug']=str_slug($value);
+
+    }
 }
